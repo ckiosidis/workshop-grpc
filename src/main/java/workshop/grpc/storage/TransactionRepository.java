@@ -1,6 +1,7 @@
-package grpc.workshop.storage;
+package workshop.grpc.storage;
 
-import grpc.workshop.model.Transaction;
+
+import workshop.grpc.model.Transaction;
 
 import java.util.List;
 

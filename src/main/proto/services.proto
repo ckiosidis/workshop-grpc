@@ -10,6 +10,8 @@ import "google/protobuf/timestamp.proto";
 
 service TransactionService {
     rpc ListTransactions (ListTransactionsRequest) returns (ListTransactionsResponse);
+    rpc StreamTransactions (StreamTransactionsRequest) returns (stream StreamedTransactionResponse);
+    rpc BiStream (stream BiStreamRequest) returns (stream StreamedTransactionResponse);
 }
 
 message ListTransactionsRequest {
@@ -18,6 +20,18 @@ message ListTransactionsRequest {
 
 message ListTransactionsResponse {
     repeated Transaction transactions = 1;
+}
+
+message StreamTransactionsRequest {
+
+}
+
+message StreamedTransactionResponse {
+    Transaction transaction = 1;
+}
+
+message BiStreamRequest {
+    bool requestsTransaction = 1;
 }
 
 message Transaction {

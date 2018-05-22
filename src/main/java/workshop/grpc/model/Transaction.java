@@ -1,7 +1,6 @@
-package grpc.workshop.model;
+package workshop.grpc.model;
 
 import java.time.Instant;
-import java.util.Date;
 
 public class Transaction {
     private long id;

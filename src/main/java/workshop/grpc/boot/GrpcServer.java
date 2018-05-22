@@ -4,6 +4,7 @@ import io.grpc.Server;
 import io.grpc.ServerInterceptors;
 import io.grpc.netty.NettyServerBuilder;
 import workshop.grpc.interceptor.HeaderKeyValidationInterceptor;
+import workshop.grpc.storage.InMemoryTransactionRepository;
 import workshop.grpc.transport.TransactionTransport;
 
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class GrpcServer {
     public void start() throws IOException {
         NettyServerBuilder serverBuilder = NettyServerBuilder.forPort(12354);
 
-        TransactionTransport transactionTransport = new TransactionTransport();
+        TransactionTransport transactionTransport = new TransactionTransport(new InMemoryTransactionRepository());
 
         serverBuilder.addService(ServerInterceptors.intercept(transactionTransport, new HeaderKeyValidationInterceptor()));
 

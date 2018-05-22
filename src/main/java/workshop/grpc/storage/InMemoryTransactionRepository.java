@@ -1,12 +1,10 @@
-package grpc.workshop.storage;
+package workshop.grpc.storage;
 
-import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
-import grpc.workshop.model.Transaction;
+import workshop.grpc.model.Transaction;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
