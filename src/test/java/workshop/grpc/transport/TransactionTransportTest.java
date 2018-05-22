@@ -6,10 +6,12 @@ import grpc.workshop.services.Transaction;
 import grpc.workshop.services.TransactionServiceGrpc;
 import io.grpc.Channel;
 import io.grpc.netty.NettyChannelBuilder;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.time.Instant;
 
+@Ignore
 public class TransactionTransportTest {
 
 
