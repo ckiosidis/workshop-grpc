@@ -1,13 +1,13 @@
 package workshop.grpc.transport;
 
-import grpc.workshop.services.ListTransactionsRequest;
-import grpc.workshop.services.ListTransactionsResponse;
-import grpc.workshop.services.Transaction;
-import grpc.workshop.services.TransactionServiceGrpc;
 import io.grpc.Channel;
 import io.grpc.netty.NettyChannelBuilder;
 import org.junit.Ignore;
 import org.junit.Test;
+import workshop.grpc.services.generated.ListTransactionsRequest;
+import workshop.grpc.services.generated.ListTransactionsResponse;
+import workshop.grpc.services.generated.Transaction;
+import workshop.grpc.services.generated.TransactionServiceGrpc;
 
 import java.time.Instant;
 
@@ -29,7 +29,6 @@ public class TransactionTransportTest {
                 .forEach(this::print);
         System.out.println("Size: "+response.getTransactionsList().size() + " transactions");
     }
-
 
     private void print(Transaction transaction) {
         System.out.println("Transaction: ");

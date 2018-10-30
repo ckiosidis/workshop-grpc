@@ -15,7 +15,7 @@ repositories {
 
 // Provide convenience executables for trying out the examples.
 apply plugin: 'application'
-mainClassName = "grpc.workshop.boot.GrpcWorkshopApplication"
+mainClassName = "workshop.grpc.boot.GrpcWorkshopApplication"
 
 
 buildscript {
